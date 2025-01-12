@@ -20,4 +20,4 @@ The isolated repeats are aligned to a reference sequence and subsequently conver
 ## Maintainer
 Any issues regarding the **rDNAmine** should be addressed to Agnieszka Czarnocka-Cieciura (aczarnocka-cieciura (at) iimcb.gov.pl).
 
-**Ninetails** has beed developed in the <a href="https://www.iimcb.gov.pl/en/research/41-laboratory-of-rna-biology-era-chairs-group">Laboratory of RNA Biology</a> (Dziembowski Lab) at the <a href="https://www.iimcb.gov.pl/en/">International Institute of Molecular and Cell Biology</a> in Warsaw. 
+**rDNAmine** has beed developed in the <a href="https://www.iimcb.gov.pl/en/research/41-laboratory-of-rna-biology-era-chairs-group">Laboratory of RNA Biology</a> (Dziembowski Lab) at the <a href="https://www.iimcb.gov.pl/en/">International Institute of Molecular and Cell Biology</a> in Warsaw. 
