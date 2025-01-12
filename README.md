@@ -5,7 +5,7 @@
 - [Introduction](#Introduction)
 - [Prerequisites](#Prerequisites)
 - [Components](#Components)
-- [General usage](#Generalusage)
+- [Usage](#Usage)
 - [Citation](#Citation)
 - [Troubleshooting](#Troubleshooting)
 - [Maintainer](#Maintainer)
@@ -152,7 +152,7 @@ The `rDNAmine_mine_format_generator.sh` script converts files containing aligned
 
 * read_name.modul.mine.csv
 
-## General usage
+## Usage
 
 ## Citation
 
