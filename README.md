@@ -21,7 +21,13 @@ We aimed to **avoid the time-consuming process of globally aligning repeats**. I
 
 ### **rDNAmine_miner.sh**
 
-Files containing Direct DNA sequencing reads (Oxford Nanopore) are typically deposited in FASTQ format. The program rDNAmine_miner.sh extracts reads into a single FASTA file and places them in a designated directory. At this stage, it is possible to specify the minimum ( -d) and maximum (-l) read lengths to be included in the analysis. We recommend using twice the length of the repeated module as the minimum read length.
+Files containing Direct DNA sequencing reads (Oxford Nanopore) are typically deposited in FASTQ format. The program `rDNAmine_miner.sh` extracts reads into a single FASTA file and places them in a designated directory. At this stage, it is possible to specify the minimum ( -d) and maximum (-l) read lengths to be included in the analysis. 
+
+> **Note**
+>
+> We recommend using twice the length of the repeated module as the minimum read length.
+> 
+</div>
 
 #### Input:
 FASTQ file containing reads derived from Direct DNA Sequencing Oxford Nanopore
@@ -35,7 +41,9 @@ filter_reads which contains:
 
 ### **rDNAmine_prospector.sh**
 
-The `rDNAmine_prospector.sh` program uses Markov chains to identify reads containing repeat sequences. It requires the number of threads available for computation and the path to a FASTA file containing the sequence of a single repeat as input arguments. If the full rDNA module sequence is known for a given organism, it should be provided as the reference. If not, a sequence from a closely related organism can be used.
+The `rDNAmine_prospector.sh` program uses Markov chains to identify reads containing repeat sequences. It requires the number of threads available for computation and the path to a FASTA file containing the sequence of a single repeat as input arguments. 
+
+If the full rDNA module sequence is known for a given organism, it should be provided as the reference. If not, a sequence from a closely related organism can be used.
 
 Alternatively, a fragment of the module can be used as the reference. In such cases, the search must be conducted in two steps. First, coordinates of the full repeat present on the reads are determined. Then, by saving the fragment of the read containing the complete repeat to a FASTA file, a reference is created. This reference is then used to repeat the search.
 
@@ -61,7 +69,14 @@ The **.tab.out** files can be used to determine the lengths of the identified re
   
 ### **rDNAmine_module_collector.sh**
 
-This program extracts regions of reads identified as repeats and saves them into separate FASTA files. The original read name is preserved in the names of the resulting files. It is possible to define a length range for the extracted sequences. However, it is important to note that if the repeated module is 9,000 bp, setting the lower limit to, for example, 2,000 bp will result in the inclusion of significantly truncated modules in the subsequent analysis, which can complicate downstream processing. We recommend using a range of (module length - 10%; module length + 10%).
+This program extracts regions of reads identified as repeats and saves them into separate FASTA files. The original read name is preserved in the names of the resulting files. It is possible to define a length range for the extracted sequences. However, it is important to note that if the repeated module is 9,000 bp, setting the lower limit to, for example, 2,000 bp will result in the inclusion of significantly truncated modules in the subsequent analysis, which can complicate downstream processing. 
+
+> **Note**
+>
+> We recommend using a range of (module length - 10%; module length + 10%).
+> 
+</div>
+
 
 #### Input:
 
