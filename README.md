@@ -23,7 +23,7 @@ The isolated repeats are aligned to a reference sequence and subsequently conver
 
 Files containing Direct DNA sequencing reads (Oxford Nanopore) are typically deposited in FASTQ format. The program rDNAmine_miner.sh extracts reads into a single FASTA file and places them in a designated directory. At this stage, it is possible to specify the minimum ( -d) and maximum (-l) read lengths to be included in the analysis. We recommend using twice the length of the repeated module as the minimum read length.
 
-Imput:
+Input:
 FASTQ file containing reads derived from Direct DNA Sequencing Oxford Nanopore
 
 Output:
@@ -41,8 +41,8 @@ Alternatively, a fragment of the module can be used as the reference. In such ca
 
 Input:
 
-    FASTA files containing individual reads.
-    A directory containing these files, prepared by the rDNAmine_miner program, which adds the suffix .split to the filenames.
+* FASTA files containing individual reads.
+* A directory containing these files, prepared by the rDNAmine_miner program, which adds the suffix .split to the filenames.
 
 Output:
 
@@ -51,8 +51,8 @@ Output:
 
 All intermediate analysis files are organised into directories:
 
-    .mine.out files are stored in rDNA_repetitions/rDNA_mine.
-    .tab.out files and FASTA files of reads without the specified repeats are placed in rDNA_repetitions/rDNA_pile.
+* .mine.out files are stored in rDNA_repetitions/rDNA_mine.
+* .tab.out files and FASTA files of reads without the specified repeats are placed in rDNA_repetitions/rDNA_pile.
 
 In the working directory, only FASTA files of reads with identified repeats and .tab.out files with the coordinates of identified repeats remain.
 
@@ -65,8 +65,8 @@ This program extracts regions of reads identified as repeats and saves them into
 
 Input:
 
-    FASTA files containing reads with identified repeats.
-    Corresponding .tab.out files with coordinates of repeats on the reads.
+* FASTA files containing reads with identified repeats.
+* Corresponding .tab.out files with coordinates of repeats on the reads.
 
 Output:
 
@@ -76,16 +76,17 @@ Output:
 
 Output Organisation:
 
-    rDNA_irrelevant: Contains all input files and read_name.tab.c.out files.
-    rDNA_modules: Contains files with module sequences.
+* rDNA_irrelevant: Contains all input files and read_name.tab.c.out files.
+* rDNA_modules: Contains files with module sequences.
   
 ### **rDNAmine_collection_inventory.sh**
 
 The rDNAmine_collection_inventory.sh program compares each module to the reference and assesses its quality. When running the program, it is essential to define -r and provide the path to the reference module. This program prepares module-reference comparison files, which will later be used for comprehensive analyses of module similarity. Our goal was to eliminate the need for global alignment of repeats, a process that is highly time-consuming and computationally demanding. Instead, each module is compared individually against the reference, and the set of such comparisons is transformed into easy-to-use tabular data at later stages of analysis.
+
 Input:
 
-    read_name.modul.fasta
-    read_name.modul.r.fasta
+* read_name.modul.fasta
+* read_name.modul.r.fasta
 
 Output:
 
@@ -111,13 +112,14 @@ Files for traditional analysis of all modules are stored in the rDNA_modules_map
 ### **rDNAmine_mine_format_generator.sh**
 
 The rDNAmine_mine_format_generator.sh script converts files containing aligned module-reference pairs into a tabular format suitable for processing in R. 
+
 Input:
 
-    read_name.pair.fasta
+* read_name.pair.fasta
 
 Output:
 
-    read_name.modul.mine.csv
+* read_name.modul.mine.csv
 
 ## General usage
 
