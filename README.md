@@ -2,13 +2,13 @@
 **a toolkit designed for working with long genomic repeats.**
 
 ## Table of Contents
-- [Introduction](##Introduction)
-- [Prerequisites](##Prerequisites)
-- [Components](##Components)
-- [General usage](##Generalusage)
-- [Citation](##Citation)
-- [Troubleshooting](##Troubleshooting)
-- [Maintainer](##Maintainer)
+- [Introduction](#Introduction)
+- [Prerequisites](#Prerequisites)
+- [Components](#Components)
+- [General usage](#Generalusage)
+- [Citation](#Citation)
+- [Troubleshooting](#Troubleshooting)
+- [Maintainer](#Maintainer)
 
 ## Introduction
 
