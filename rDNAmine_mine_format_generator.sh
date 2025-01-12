@@ -13,7 +13,7 @@ fi
 echo "number of files: $number_of_files"
 
 
-# Lienarase the fasta files
+# Lienarise the fasta files
 
 for fast_input in *.pair.fasta; do
         basename1="${fast_input%%.pair.fasta}"

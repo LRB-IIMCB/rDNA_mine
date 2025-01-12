@@ -36,7 +36,7 @@ for tab_file in *.tab.out; do
     echo "$tab_file" >> list_tab_file.txt
 done
 
-# Count the number of lines (files) in list_tab_file.txt
+# Count the number of lines (files) in list_tab_file.txtdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAbElEQVR4Xs2RQQrAMAgEfZgf7W9LAguybljJpR3wEse5JOL3ZObDb4x1loDhHbBOFU6i2Ddnw2KNiXcdAXygJlwE8OFVBHDgKrLgSInN4WMe9iXiqIVsTMjH7z/GhNTEibOxQswcYIWYOR/zAjBJfiXh3jZ6AAAAAElFTkSuQmCC
 number_of_files=$(wc -l < list_tab_file.txt)
 
 # Check if there are no files to process
